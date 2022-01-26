@@ -1,9 +1,6 @@
 import axios from 'axios';
-import dotenv from 'dotenv';
 
-dotenv.config();
-
-const URL = '';
+const URL = process.env.REACT_APP_HEROKU_URL;
 
 export const fetchPosts = () => axios.get(URL);
 export const createPost = newPost => axios.post(URL, newPost);
